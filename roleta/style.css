@@ -1,0 +1,12 @@
+#roleta{
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	background-image: linear-gradient(green, blue, red, orange);
+}
+
+#btn-girar{
+	margin-top: 30px;
+	width: 100px;
+	height: 30px;
+}
