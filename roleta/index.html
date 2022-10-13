@@ -8,9 +8,38 @@
 	<script defer src="script.js"></script>
 </head>
 <body>
-	<div id="roleta">
-    </div>
+	<div class="container-jogo">
+		<div class="container-roleta">
+			<div id="seta"></div>
+			<div id="roleta">
+				<img src="roleta2.png">
+		  </div>
+		  <button id="btn-girar">GIRAR</button>
+	  </div>
 
-    <button id="btn-girar">Girar</button>
+	  <div class="container-jogadores">
+	    <div class="painel-jogador" id="jogador1">
+	    </div>
+
+	    <div class="painel-jogador" id="jogador2">  	
+	    </div>
+	  </div>
+
+    
+    
+    <div class="container-palavra">
+    	<div id="dica">dica</div>
+		  <div class="caixa-palavra">
+		  	<div id="palavra">palavra secreta</div>
+		  </div>
+	  </div>
+	  
+	  <div class="container-chute">
+		  <input type="text">
+		  <button id="btn-chutar">CHUTAR</button>
+	  </div>
+  </div>
+
+  <audio src="som-roleta.mp3" id="som-roleta"></audio>
 </body>
 </html>
