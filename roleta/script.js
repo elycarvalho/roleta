@@ -3,6 +3,10 @@ const btnGira = document.getElementById('btn-girar')
 const somRoleta = document.getElementById('som-roleta')
 const jogador1 = document.getElementById('jogador1')
 const jogador2 = document.getElementById('jogador2')
+const chutar = document.getElementById('btn-chutar')
+var chute = document.getElementById('chute')
+const palavra = document.getElementById('palavra')
+var liberaChute = 0
 var pontos 
 var pontosJogador1 = 0
 var pontosJogador2 = 0
@@ -10,23 +14,24 @@ var rodada = 1
 var giro = 1
 var giroExtra = 1
 var indexClique = 0
+var palavraSecreta
+var dica = document.getElementById('dica')
+var indexChute = 2
+var embaralha
 
 
 //banco de palavras
 var palavras = [
-    {palavra:"palavra1", dica:"dica1"},
-    {palavra:"palavra2", dica:"dica2"},
-    {palavra:"palavra3", dica:"dica3"},
-    {palavra:"palavra4", dica:"dica4"},
-    {palavra:"palavra5", dica:"dica5"},
-    {palavra:"palavra6", dica:"dica6"},
-    {palavra:"palavra7", dica:"dica7"},
-    {palavra:"palavra8", dica:"dica8"},
-    {palavra:"palavra9", dica:"dica9"},
-    {palavra:"palavra10", dica:"dica10"},
-    {palavra:"palavra11", dica:"dica11"},
-    {palavra:"palavra12", dica:"dica12"}
-]
+          //Palavra / dica 1 / dica 2 / dica 3 
+        ['anta', 'animal com A', '_ _ _ _', 'A_ _ _', 'An_ _'],
+        ['panela', 'Cozinha', '_ _ _ _ _ _', 'P_ _ _ _ _', 'Pa_ _ _ _'],
+        ['chinelo', 'Calçado', '_ _ _ _ _ _ _', 'Ch_ _ _ _ _', 'Chi_ _ _ _'],
+        ['caneta', 'Escrever', '_ _ _ _ _ _', 'C_ _ _ _ _', 'CA_ _ _ _'],
+        ['mouse', 'Computador', '_ _ _ _ _', 'M_ _ _ _', 'Mo_ _ _'],
+        ['chaveiro', 'chave', '_ _ _ _ _ _ _ _', 'C_ _ _ _ _ _ _', 'C_ _ _ _ _ _ o'],
+        ['árvore', 'Galhos', '_ _ _ _ _ _', 'Á_ _ _ _ _', 'Ár_ _ _ _'],
+        ['biscoito', 'alimento com B', '_ _ _ _ _ _ _ _', 'B_ _ _ _ _ _ _', 'Bi_ _ _ _ _ _']
+      ]
 
 btnGira.addEventListener('click', () => {
    somRoleta.play()
@@ -41,7 +46,7 @@ btnGira.addEventListener('click', () => {
          jogador1.style.border = '10px solid yellow'
          jogador2.style.border = '10px solid #EF644B' 
       }
-   
+      
    inicio()
   }  
 })
@@ -81,6 +86,8 @@ function giroFinal() {
    	clearInterval(intervaloGiro2)
       indexClique = 0
       checaPontuacao()
+      liberaChute = 1
+      processaChute()
    }
 }
 
@@ -147,6 +154,22 @@ function checaPontuacao() {
       jogador2.innerHTML = pontosJogador2
    }
 }
+
+embaralha = Math.trunc(Math.random() * palavras.length)
+
+function processaChute() {
+   if(liberaChute = 1) {
+      chute.focus()      
+      palavraSecreta = palavras[embaralha]
+      dica.innerHTML = palavraSecreta[1]
+      palavra.innerHTML = palavraSecreta[indexChute]
+
+      }
+}
+
+chutar.addEventListener('click', () => {
+   
+})
 
 
 
