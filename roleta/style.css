@@ -1,6 +1,7 @@
 body{
 	margin: 0;
 	padding: 0;
+	background-image: radial-gradient(#4A92E7,#2E287A);
 }
 .container-jogo{
 	margin: 0 auto;
@@ -12,6 +13,7 @@ body{
 }
 
 .container-roleta{
+	margin: 0 auto;
 	width: 362px;
 	height: 370px;
 }
@@ -23,7 +25,6 @@ body{
 	position: relative;
 	bottom: 20px;
 }
-
 
 #btn-girar{
 	font-size: 1.5rem;
@@ -63,7 +64,8 @@ body{
 }
 
 .container-jogadores{
-    display: flex;  
+    display: flex;
+    justify-content: space-between;  
 }
 
 #jogador1{
@@ -118,7 +120,7 @@ body{
 }
 
 #palavra{
-	font-size: 1.05rem;
+	font-size: 0.95rem;
 	font-weight: bold;
 	width: 85%;
 	height: 25px;
@@ -132,4 +134,28 @@ body{
 .container-chute{
 	margin-top: 10px;
 	display: flex;
+}
+
+#mostraTelaFinal{
+	position: absolute;
+	top: 70px;
+	left: 10%;
+	z-index: 1;
+	background-color: lightgray;
+	width: 50%;
+	height: 350px;
+	box-shadow: 13px 13px 13px;
+}
+
+@media (max-width: 576px) {
+	#mostraTelaFinal{
+		width: 85%;
+	}
+	.container-jogo{
+		width: 99%;
+	}
+	#palavra{
+		font-size: 0.75rem;
+	}
+
 }

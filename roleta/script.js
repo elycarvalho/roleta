@@ -6,6 +6,9 @@ const jogador2 = document.getElementById('jogador2')
 const chutar = document.getElementById('btn-chutar')
 var chute = document.getElementById('chute')
 const palavra = document.getElementById('palavra')
+const palavraAcertada = document.getElementById('palavraAcertada')
+const pontosVencedor = document.getElementById('pontosVencedor')
+const mostraTelaFinal = document.getElementById('mostraTelaFinal')
 var liberaChute = 0
 var pontos 
 var pontosJogador1 = 0
@@ -32,6 +35,9 @@ var palavras = [
         ['árvore', 'Galhos', '_ _ _ _ _ _', 'Á_ _ _ _ _', 'Ár_ _ _ _'],
         ['biscoito', 'alimento com B', '_ _ _ _ _ _ _ _', 'B_ _ _ _ _ _ _', 'Bi_ _ _ _ _ _']
       ]
+
+
+jogador2.style.border = '10px solid yellow'
 
 btnGira.addEventListener('click', () => {
    somRoleta.play()
@@ -61,7 +67,6 @@ var numAleatorio = Math.trunc(Math.random() * 720)
 console.log('random ' + numAleatorio)
 
 function giraRoleta() {
-   
    roleta.style.transform = `rotate(${giro}deg`
    giro = giro + 2
    console.log(giro)
@@ -168,8 +173,25 @@ function processaChute() {
 }
 
 chutar.addEventListener('click', () => {
-   
+   console.log(palavraSecreta[0])
+   if(chute.value === palavraSecreta[0]) {
+      telaFinal()
+   } else {
+      palavra.innerHTML = 'ERROU'
+   }
 })
 
+function telaFinal() {
+   mostraTelaFinal.style.display = 'block'
+  if(rodada === 1) {
+    vencedor.innerHTML = 'jogador 1'
+    pontosVencedor.innerHTML = pontosJogador1
+  } 
+  if(rodada === 2) {
+    vencedor.innerHTML = 'jogador 2'
+    pontosVencedor.innerHTML = pontosJogador2
+  }
+  palavraAcertada.innerHTML = palavraSecreta[0]
+}
 
 
