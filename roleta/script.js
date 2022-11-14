@@ -42,7 +42,8 @@ let palavras = [
         ['biblioteca', 'lugar de leitura', '_ _ _ _ _ _ _ _ _ _'],
         ['cavalo', 'cavaleiros precisam dele', '_ _ _ _ _ _'],
         ['lavanderia', 'lugar de lavar roupas', '_ _ _ _ _ _ _ _ _ _'],
-        ['aliança', 'tem no casamento', '_ _ _ _ _ _ _']
+        ['aliança', 'tem no casamento', '_ _ _ _ _ _ _'],
+        ['palhaço', 'tem no circo', '_ _ _ _ _ _ _']
       ]
 
 jogador2.style.border = '10px solid yellow'
@@ -103,7 +104,6 @@ function giroFinal() {
       processaChute()
    }
 }
-
 
 function checaPontuacao() {
    if (giro >= 0 && giro <= 15)  {pontos = 'Perde'}
@@ -175,14 +175,20 @@ function processaChute() {
       chute.focus()      
       palavraSecreta = palavras[embaralha]
       dica.innerHTML = palavraSecreta[1]
-      palavra.innerHTML = palavraSecreta[indexChute]
-
+      let tracos = []
+      for (let i = 0; i < palavraSecreta.length; i++) {
+         tracos.unshift(' _')
       }
+      palavra.innerHTML = tracos
+     // palavra.innerHTML = palavraSecreta[indexChute]
+   }
 }
 
 chutar.addEventListener('click', () => {
    console.log(palavraSecreta[0])
-   if(chute.value == palavraSecreta[0]) {
+   let chuteToLow = chute.value
+   chuteToLow.toLowerCase()
+   if(chuteToLow == palavraSecreta[0]) {
       telaFinal()
    } else {
       palavra.innerHTML = 'ERROU'
