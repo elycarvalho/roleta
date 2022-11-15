@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Roleta</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script defer src="script.js"></script>
+</head>
+<body>
+	<div id="tela-inicial">
+	  <img src="wheel.png">
+	  <h3>Digite os nomes dos jogadores</h3>
+		<input id="nome1" type="text" value="Jogador 1">
+		<input id="nome2" type="text" value="jogador 2">
+    <button id="btnComecar">Começar</button>	
+	</div>
+
+	<div class="container-jogo">
+		<div class="container-roleta">
+			<div id="seta"></div>
+			<div id="roleta">
+				<img src="roleta2.png">
+		  </div>
+		  <button id="btn-girar">GIRAR</button>
+	  </div>
+
+    <div class="container-nomes">
+    	<div id="nomePlayer1"></div>
+    	<div id="nomePlayer2"></div>
+    </div>
+
+	  <div class="container-jogadores">
+	    <div class="painel-jogador" id="jogador1">
+	    </div> 
+	    <div class="painel-jogador" id="jogador2">  	
+	    </div>
+	  </div>
+
+    <div class="container-palavra">
+    	<div id="dica">dica</div>
+		  <div class="caixa-palavra">
+		  	<div id="palavra">palavra secreta</div>
+		  </div>
+	  </div>
+	  
+	  <div class="container-chute">
+		  <input type="text" id="chute">
+		  <button id="btn-chutar">CHUTAR</button>
+	  </div>
+  </div>
+
+  <div id="mostraTelaFinal" style="display: none;">
+    <div id="vencedor"></div>
+    <div id="pontosVencedor"></div>
+    <div id="palavraAcertada"></div>
+    <button id="btnReiniciar">REINICIAR</button>
+  </div>
+
+  <audio src="som-roleta.mp3" id="som-roleta"></audio>
+</body>
+</html>
