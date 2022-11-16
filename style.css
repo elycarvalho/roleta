@@ -167,7 +167,7 @@ body{
 	background-color: #2740CA;
 	border-radius: 50px;
     width: 210px;
-    height: 35px;
+    height: 38px;
     border: 2px solid #E1FF4B;
 }
 
@@ -190,7 +190,7 @@ body{
 }
 
 #palavra{
-	font-size: 1.2rem;
+	font-size: 0.8rem;
 	font-weight: bold;
 	width: 85%;
 	height: 25px;
