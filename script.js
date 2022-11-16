@@ -197,7 +197,7 @@ function processaChute() {
       dica.innerHTML = palavraSecreta[1]
       let tracos = []
       for (let i = 0; i < palavraSecreta[0].length; i++) {
-         tracos.unshift(' _')
+         tracos.unshift(' _ ')
       }
       palavra.innerHTML = tracos.join(' ')
    }

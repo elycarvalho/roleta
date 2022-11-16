@@ -11,6 +11,7 @@ body{
 	height: 580px;
 	color: #fff;
 	background-image: radial-gradient(#4A92E7,#2E287A);
+	text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,6 +39,8 @@ body{
 	border: 3px solid orange;
 	background-image: linear-gradient(#416302, #024F63)
 }
+
+
 
 #tela-inicial img{
 	animation: roda-girando 3s infinite;
@@ -164,7 +167,7 @@ body{
 	background-color: #2740CA;
 	border-radius: 50px;
     width: 210px;
-    height: 30px;
+    height: 35px;
     border: 2px solid #E1FF4B;
 }
 
@@ -187,7 +190,7 @@ body{
 }
 
 #palavra{
-	font-size: 0.8rem;
+	font-size: 1.2rem;
 	font-weight: bold;
 	width: 85%;
 	height: 25px;
@@ -212,14 +215,12 @@ body{
 	align-items: center;
 	justify-content: space-evenly;
 	position: absolute;
-	top: 30px;
-	left: 25%;
-	z-index: 1;
+	top: 0;
+	z-index: 2;
 	background-image: radial-gradient(#FAFD4D, #FE771F);
-	width: 50%;
-	height: 450px;
+	width: 99%;
+	height: 580px;
 	box-shadow: 13px 13px 13px;
-	border-radius: 10px;
 }
 
 #btnReiniciar{
@@ -230,19 +231,15 @@ body{
 	border-radius: 10px;
 	border: none;
 	box-shadow: 2px 2px 10px;
-	background-image: radial-gradient(#27CFCF, #7958FD);
+	background-image: radial-gradient(#27CFCF, #7F87FA);
 }
 
 @media (max-width: 576px) {
-	#mostraTelaFinal{
-		width: 85%;
-		left: 2%;
-	}
 	.container-jogo{
 		width: 99%;
 	}
 	#palavra{
-		font-size: 0.75rem;
+		font-size: 0.75rem;569
 	}
 	#tela-inicial h1{
 		font-size: 1.7rem;
@@ -252,10 +249,6 @@ body{
 @media (max-width:  370px) {
 	#tela-inicial{
 		width: 385px;
-	}
-	#mostraTelaFinal{
-		left: 6%;
-		padding: 20px;
 	}
 	#tela-inicial h1{
 		font-size: 1.4rem;
