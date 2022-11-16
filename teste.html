@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Roleta</title>
+	
+</head>
+<body>
+	
+  <input type="text" id="palavra">
+  <button id="btn">transforma</button>
+  <div id="modificado"></div>
+  
+
+  <script>
+  	let btn = document.getElementById('btn')
+  	let palavra = document.getElementById('palavra')
+  	let modificado = document.getElementById('modificado')
+  	let palavraLow
+  	btn.addEventListener('click', () => {
+      palavraLow = palavra.value.toLowerCase()
+      modificado.innerHTML = palavraLow
+  	})
+  </script>
+</body>
+</html>

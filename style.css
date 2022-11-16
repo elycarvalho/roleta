@@ -1,6 +1,7 @@
 body{
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 	background-image: radial-gradient(#4A92E7,#2E287A);
 	font-family: arial, sans-serif;
 }
@@ -25,6 +26,25 @@ body{
 	border: 1px solid #9F4513;
 	text-align: center;
 	font-size: 1.1rem;
+}
+
+#tela-inicial h1{
+	padding: 10px;
+	font-size: 2.2rem;
+	color: #E69F02;
+	font-weight: 700;
+	text-shadow: 2px 2px 2px #020561;
+	border-radius: 30px;
+	border: 3px solid orange;
+	background-image: linear-gradient(#416302, #024F63)
+}
+
+#tela-inicial img{
+	animation: roda-girando 3s infinite;
+}
+
+@keyframes roda-girando {
+	100% {transform: rotate(360deg);}
 }
 
 #btnComecar{
@@ -72,7 +92,7 @@ body{
 	left: 109px;
 	outline: none;
 	border: none;
-	background-image: radial-gradient(#00DEAB, #285B7A);
+	background-image: radial-gradient(#00DEAB, #0F799A);
 }
 
 #seta{
@@ -224,10 +244,20 @@ body{
 	#palavra{
 		font-size: 0.75rem;
 	}
+	#tela-inicial h1{
+		font-size: 1.7rem;
+	}
 }
 
 @media (max-width:  370px) {
 	#tela-inicial{
 		width: 385px;
+	}
+	#mostraTelaFinal{
+		left: 6%;
+		padding: 20px;
+	}
+	#tela-inicial h1{
+		font-size: 1.4rem;
 	}
 }

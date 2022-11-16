@@ -33,11 +33,11 @@ let embaralha
 let palavras = [
           //Palavra / dica  
         ['anta', 'animal com A'],
-        ['panela', 'Cozinha'],
-        ['chinelo', 'Calçado'],
-        ['caneta', 'Escrever'],
-        ['mouse', 'Computador'],
-        ['chaveiro', 'chave'],
+        ['panela', 'Utensílio de cozinha'],
+        ['chinelo', 'Tipo de calçado'],
+        ['caneta', 'Usa para escrever'],
+        ['mouse', 'usa no computador'],
+        ['chaveiro', 'chaves'],
         ['árvore', 'Galhos'],
         ['biscoito', 'alimento com B'],
         ['barata', 'muitos tem medo'],
@@ -53,7 +53,11 @@ let palavras = [
         ['camisa', 'peça de roupa'],
         ['churrasqueira', 'aquece usando carvão'],
         ['morango', 'fruta vermelha'],
-        ['golfinho', 'mamífero aquatico']
+        ['golfinho', 'mamífero aquatico'],
+        ['caminhão', 'transporte de carga'],
+        ['tesoura', 'usada pra cortar'],
+        ['diamante', 'pedra preciosa'],
+        ['sabonete', 'usa no banho']
       ]
 
 btnComecar.addEventListener('click', () => {
@@ -201,9 +205,8 @@ function processaChute() {
 
 chutar.addEventListener('click', () => {
    console.log(palavraSecreta[0])
-   let chuteToLow = chute.value
-   chuteToLow.toLowerCase()
-   console.log(chuteToLow)
+   let chuteToLow = chute.value.toLowerCase()
+   console.log('chute low ' + chuteToLow)
    if(chuteToLow == palavraSecreta[0]) {
       telaFinal()
    } else {
